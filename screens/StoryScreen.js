@@ -42,7 +42,7 @@ export default class StoryScreen extends Component {
   }
 
   async initiateTTS(title,author,story,moral){
-    const current_color=this.state.speakerColor();
+    const current_color=this.state.speakerColor;
     this.setState({speakerColor:current_color==="grey"?"#ee8249":"grey"})
     if(current_color==="grey"){
       Speech.speak(`${title} by ${author}`);
